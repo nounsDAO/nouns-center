@@ -46,14 +46,23 @@ const Footer = () => {
           </svg>
         </a>
 
-        {/* Discourse */}
-        <a href="https://discourse.nouns.wtf/" target="_blank" rel="noreferrer">
+        {/* Farcaster */}
+        <a href="https://warpcast.com/~/channel/nouns/" target="_blank" rel="noreferrer">
           <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 fill-black  hover:fill-gray-400 transition cursor-pointer"
+            viewBox="128.9 155.6 751.1 688.9"
+          >
+            <path d="M258 156h484v688h-71V529h-1a171 171 0 0 0-340 0h-1v315h-71V156Z" />
+            <path d="m129 253 29 98h24v396c-12 0-22 10-22 22v27h-4c-13 0-23 10-23 22v26h249v-26c0-12-10-22-22-22h-4v-27c0-12-10-22-23-22h-26V253H129Zm547 494c-13 0-23 10-23 22v27h-4c-12 0-22 10-22 22v26h249v-26c0-12-10-22-23-22h-4v-27c0-12-10-22-22-22V351h24l29-98H702v494h-26Z" />
+          </svg>
+
+          {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 -1 104 106"
             className="h-6 w-6 fill-black  hover:fill-gray-400 transition cursor-pointer"
           >
-            <title>Discourse_logo</title>
+            <title>Farcaster_logo</title>
             <g id="Layer_2">
               <g id="Layer_3">
                 <path d="M51.87,0C23.71,0,0,22.83,0,51c0,.91,0,52.81,0,52.81l51.86-.05c28.16,0,51-23.71,51-51.87S80,0,51.87,0Z" />
@@ -64,7 +73,7 @@ const Footer = () => {
                 <path d="M24.58,66.41A31.61,31.61,0,0,1,71.63,26.29a31.61,31.61,0,0,0-49,39.63l-3.76,18.9Z" />
               </g>
             </g>
-          </svg>
+          </svg> */}
         </a>
       </div>
     </div>
