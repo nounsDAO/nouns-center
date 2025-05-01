@@ -83,7 +83,7 @@
   {
     "name": "Dev FAQ",
     "imageUrl": "discussions.png",
-    "bio": "Ask technical questions you're wondering about, share ideas, or engage with other community members.",
+    "bio": "Ask technical questions you're wondering about, or engage with other community members.",
     "url": "https://github.com/nounsDAO/nouns-monorepo/discussions",
     "btnText": "View FAQs",
     "notion": false,
