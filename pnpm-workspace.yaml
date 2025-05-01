@@ -1,0 +1,9 @@
+onlyBuiltDependencies:
+  - bigint-buffer
+  - bufferutil
+  - core-js-pure
+  - keccak
+  - react-vertical-timeline-component
+  - secp256k1
+  - sharp
+  - utf-8-validate
