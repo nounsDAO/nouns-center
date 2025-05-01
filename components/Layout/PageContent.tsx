@@ -1,7 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import Divider from '../Divider';
-import Newsletter from '../Newsletter';
 import Footer from '../Footer';
 
 const PageContent = ({ children }) => {
@@ -15,10 +14,6 @@ const PageContent = ({ children }) => {
       {asPath !== '/' && (
         <>
           <Divider />
-
-          <div className="sm:ml-20 mb-2">
-            <Newsletter />
-          </div>
 
           <Footer />
         </>
