@@ -1,7 +1,3 @@
 {
-  "prettier.configPath": ".prettierrc",
-  "conventionalCommits.scopes": [
-    "package",
-    "ide"
-  ]
+  "prettier.configPath": ".prettierrc"
 }
