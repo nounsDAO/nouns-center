@@ -4,7 +4,6 @@ import Title from '../components/Title';
 import PageHeader from '../components/Layout/PageHeader';
 import PageContent from '../components/Layout/PageContent';
 import Subheader from '../components/Subheader';
-import Button from '../components/common/Button';
 import Table from '../components/groups/Table';
 
 const communitiesNotionLink = 'aebc0a4fb69a48a1bb6001bf356014ae';
@@ -40,7 +39,7 @@ const Groups = ({ groups }) => {
           title="Looking for a community?"
           body="A list of all the groups in the Nouns universe including their description and Discord invite link. Don't see your group here? Add it to the backlog, and we'll get it up as soon as possbile."
         />
-        <Button text="Add your group" link="https://www.addressform.io/f/groups" />
+        {/* <Button text="Add your group"  /> */}
       </PageHeader>
 
       <PageContent>

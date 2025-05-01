@@ -8,22 +8,9 @@ import Subheader from '../../components/Subheader';
 import { useRouter } from 'next/router';
 import PageContent from '../../components/Layout/PageContent';
 import PageHeader from '../../components/Layout/PageHeader';
-import Button from '../../components/common/Button';
-import { fetchProjectFormData } from '../../utils/project-form-data-fetching';
 
-export const getStaticProps = async () => {
-  const projects = await fetchProjectFormData();
-
-  return {
-    props: {
-      projects,
-    },
-    revalidate: 60,
-  };
-};
-
-const Projects = props => {
-  const [filteredProjects, setFilteredProjects] = useState(projects.concat(props.projects));
+const Projects = () => {
+  const [filteredProjects, setFilteredProjects] = useState(projects);
   const [projectsText, setProjectsText] = useState('projects and counting!');
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
@@ -98,10 +85,7 @@ const Projects = props => {
           title={`${filteredProjects.length} ${projectsText}`}
           body="Here's a comprehensive list of all the projects in the NounsDAO ecosystem. If you don't see your project here and would like to add it, click the button to have it added to the backlog. The site is updated with new projects once a week."
         />
-        <Button
-          link="https://www.addressform.io/form/9e6bc6c2-0f0d-4420-b66e-0d416a5fe73a"
-          text="Submit your project"
-        />
+        {/* <Button text="Submit your project" /> */}
       </PageHeader>
       <PageContent>
         <div className="mb-4">

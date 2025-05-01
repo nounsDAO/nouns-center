@@ -13,7 +13,6 @@ import {
   FaDiscourse as DiscourseIcon,
 } from 'react-icons/fa';
 import { TbWorld as WebsiteIcon } from 'react-icons/tb';
-import Button from '../../components/common/Button';
 
 const Subdaos = () => {
   interface OpenInNewTabProps {
@@ -41,7 +40,7 @@ const Subdaos = () => {
           body="A summary of all subDAOs in the NounsDAO Ecosystem. Find out what each subDAOs is about, how to join them, and where to get started building in subDAOs. Click the button below to add a Nounish subDAOs not yet on this page."
         />
 
-        <Button text="Add community" link="https://www.addressform.io/f/subdaos" />
+        {/* <Button text="Add community" /> */}
       </PageHeader>
 
       <PageContent>
