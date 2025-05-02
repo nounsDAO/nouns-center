@@ -7,6 +7,7 @@ import MobileNavigation from './Mobile';
 import { Fragment } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 import { BiLinkExternal as ExternalIcon } from 'react-icons/bi';
+import Link from 'next/link';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -15,8 +16,12 @@ function classNames(...classes) {
 const Web = () => {
   return (
     <>
-      <Disclosure as="nav" className="bg-white shadow-sm sm:sticky sm:top-0 sm:z-10	">
-        {({ open }) => (
+      <Disclosure
+        as="nav"
+        defaultOpen={false}
+        className="bg-white shadow-sm sm:sticky sm:top-0 sm:z-10	"
+      >
+        {({ open, close }) => (
           <>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
               <div className="flex justify-between h-16">
@@ -32,15 +37,10 @@ const Web = () => {
                   </Disclosure.Button>
                 </div>
 
-                <div
-                  className="shrink-0 flex items-center cursor-pointer"
-                  onClick={() => close()}
-                >
-                  {/* eslint-disable @next/next/no-html-link-for-pages */}
-                  {/* Doing this so the link closes the mobile nav bar */}
-                  <a href="/">
+                <div className="shrink-0 flex items-center cursor-pointer" onClick={() => close()}>
+                  <Link passHref href="/" onClick={() => close()}>
                     <img className="block h-10 w-auto" src="/earth.gif" alt="Workflow" />
-                  </a>
+                  </Link>
                 </div>
 
                 {/* DESKTOP MENU */}
