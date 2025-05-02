@@ -65,10 +65,12 @@ const ProjectDetails = ({ projectData }) => {
               <span className="">{category.join(', ')}</span>
             </div>
 
-            <Link passHref href="/projects">
-              <a className="hidden text-sm font-semibold text-blue-base hover:text-blue-base sm:block">
-                All projects<span aria-hidden="true"> &rarr;</span>
-              </a>
+            <Link
+              passHref
+              href="/projects"
+              className="hidden text-sm font-semibold text-blue-base hover:text-blue-base sm:block">
+              All projects<span aria-hidden="true"> &rarr;</span>
+
             </Link>
           </div>
 
