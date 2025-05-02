@@ -42,7 +42,6 @@
   .DocSearch-Container {
     @apply bg-white bg-opacity-40 dark:bg-black dark:bg-opacity-10 !important;
   }
-  background: rgba(255, 255, 255, 0.9) !important;
 }
 @font-face {
   font-family: 'CalSans';
@@ -94,8 +93,8 @@
 
 body {
   color: #292929;
-  font-family: ;
 }
+
 h1 {
   font-size: 56px;
 }
