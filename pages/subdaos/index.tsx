@@ -6,7 +6,6 @@ import Subheader from '../../components/Subheader';
 import PageHeader from '../../components/Layout/PageHeader';
 import PageContent from '../../components/Layout/PageContent';
 import subdaos from './subdaos.json';
-import Markdown from 'markdown-to-jsx';
 import {
   FaTwitter as TwitterIcon,
   FaDiscord as DiscordIcon,
@@ -15,13 +14,6 @@ import {
 import { TbWorld as WebsiteIcon } from 'react-icons/tb';
 
 const Subdaos = () => {
-  interface OpenInNewTabProps {
-    children: React.ReactNode;
-  }
-
-  // overrides an <a> tag that doesn't have target="_blank" and adds it
-  const OpenInNewTab = ({ children, ...props }: OpenInNewTabProps) => <a {...props}>{children}</a>;
-
   // interface SubdaoProps {
   //   name: 'string';
   //   overview: 'string';
@@ -68,39 +60,10 @@ const Subdaos = () => {
               <div className="rounded-xl py-4">
                 <img className="" src={s.img} alt={s.img} />
               </div>
-              <Markdown
-                options={{
-                  overrides: {
-                    a: {
-                      component: OpenInNewTab,
-                      props: {
-                        target: '_blank',
-                        rel: 'noreferrer',
-                      },
-                    },
-                  },
-                }}
-              >
-                {s.overview}
-              </Markdown>
-              <br />
+              <pre>{s.overview}</pre>
               <div className="pb-4">
                 <p className="font-bold">How To Join:</p>
-                <Markdown
-                  options={{
-                    overrides: {
-                      a: {
-                        component: OpenInNewTab,
-                        props: {
-                          target: '_blank',
-                          rel: 'noreferrer',
-                        },
-                      },
-                    },
-                  }}
-                >
-                  {s.join}
-                </Markdown>
+                <pre>{s.join}</pre>
               </div>
 
               <div className="mb-12 sm:mb-20 flex">
