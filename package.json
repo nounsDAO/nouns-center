@@ -10,7 +10,6 @@
     "format-check": "prettier --check \"**/*.ts\" \"**/*.tsx\" \"**/*.js\""
   },
   "dependencies": {
-    "@docsearch/css": "^3.2.1",
     "@headlessui/react": "^0.0.0-insiders.fc7def3",
     "@heroicons/react": "^1.0.5",
     "@rainbow-me/rainbowkit": "^0.4.1",

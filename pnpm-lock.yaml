@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@docsearch/css':
-        specifier: ^3.2.1
-        version: 3.2.1
       '@headlessui/react':
         specifier: ^0.0.0-insiders.fc7def3
         version: 0.0.0-next.e9e6ade(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
@@ -773,9 +770,6 @@ packages:
   '@coinbase/wallet-sdk@3.5.3':
     resolution: {integrity: sha512-kaGMk9KyiSLPm1+BvCQSc99ku9gn0j+M1+2Beii+4gx/lRVhutlzmn6l+5zTB/n3xri25iTr+SxjMZLlMfW8Hg==}
     engines: {node: '>= 10.0.0'}
-
-  '@docsearch/css@3.2.1':
-    resolution: {integrity: sha512-gaP6TxxwQC+K8D6TRx5WULUWKrcbzECOPA2KCVMuI+6C7dNiGUk5yXXzVhc5sld79XKYLnO9DRTI4mjXDYkh+g==}
 
   '@emotion/hash@0.8.0':
     resolution: {integrity: sha512-kBJtf7PH6aWwZ6fka3zQ0p6SBYzx4fl1LoZXE2RrnYST9Xljm7WfKJrU4g/Xr3Beg72MLrp1AWNUmuYJTL7Cow==}
@@ -5664,8 +5658,6 @@ snapshots:
       - react-native
       - supports-color
       - utf-8-validate
-
-  '@docsearch/css@3.2.1': {}
 
   '@emotion/hash@0.8.0': {}
 
