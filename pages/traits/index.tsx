@@ -2,7 +2,6 @@
 import React from 'react';
 import Header from '../../components/Header';
 import Title from '../../components/Title';
-import { v4 as uuidv4 } from 'uuid';
 import traits from './traits.json';
 
 import Subheader from '../../components/Subheader';
@@ -46,7 +45,7 @@ const Traits = () => {
           <div className="grid xs:grid-cols-4 sm:grid-cols-5 lg:grid-cols-6 xl:grid-cols-6 gap-2 ">
             {heads &&
               heads.map(head => (
-                <div key={uuidv4()} className="flex flex-col items-center mb-8">
+                <div key={head.image} className="flex flex-col items-center mb-8">
                   <img src={`/traits/heads/head-${head.image}.png`} alt="head" />
                   <p className="text-nouns text-black text-center tracking-wider xs:text-sm sm:text-lg">
                     {head.name}
@@ -63,7 +62,7 @@ const Traits = () => {
           <div className="grid xs:grid-cols-4 sm:grid-cols-5 lg:grid-cols-6 xl:grid-cols-6 gap-2 ">
             {glasses &&
               glasses.map(g => (
-                <div key={uuidv4()} className="flex flex-col items-center mb-8">
+                <div key={g.image} className="flex flex-col items-center mb-8">
                   <img src={`/traits/glasses/glasses-square-${g.image}.png`} alt="glasses" />
                   <p className="text-nouns text-black text-center tracking-wider xs:text-sm sm:text-lg">
                     {g.name}
@@ -80,7 +79,7 @@ const Traits = () => {
           <div className="grid xs:grid-cols-4 sm:grid-cols-5 lg:grid-cols-6 xl:grid-cols-6 gap-2 ">
             {bodies &&
               bodies.map(body => (
-                <div key={uuidv4()} className="flex flex-col items-center mb-8">
+                <div key={body.image} className="flex flex-col items-center mb-8">
                   <img src={`/traits/bodies/body-${body.image}.png`} alt="body" />
                   <p className="text-nouns text-black text-center tracking-wider xs:text-sm sm:text-lg">
                     {body.name}
@@ -97,7 +96,7 @@ const Traits = () => {
           <div className="grid xs:grid-cols-4 sm:grid-cols-5 lg:grid-cols-6 xl:grid-cols-6 gap-2 ">
             {accessories &&
               accessories.map(accessory => (
-                <div key={uuidv4()} className="flex flex-col items-center mb-8">
+                <div key={accessory.image} className="flex flex-col items-center mb-8">
                   <img
                     src={`/traits/accessories/accessory-${accessory.image}.png`}
                     alt="accessory"

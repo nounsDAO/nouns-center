@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import Header from '../../components/Header';
-import { v4 as uuidv4 } from 'uuid';
 import Title from '../../components/Title';
 import talentFromJSON from './talent.json';
 import { FaTwitter as TwitterIcon, FaDiscord as DiscordIcon } from 'react-icons/fa';
@@ -43,7 +42,7 @@ const Talent = () => {
                     ) : (
                       person.title.map(t => (
                         <span
-                          key={uuidv4()}
+                          key={person.name + person.title}
                           className="flex-shrink-0 inline-block px-2 py-0.5 text-green-800 text-xs font-medium bg-green-100 rounded-full lowercase text"
                         >
                           {t}

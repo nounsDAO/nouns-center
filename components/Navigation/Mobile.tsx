@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
 import { BiLinkExternal as ExternalIcon } from 'react-icons/bi';
-import { v4 as uuidv4 } from 'uuid';
 import { Disclosure } from '@headlessui/react';
 import navigationData from './navigation.json';
 
@@ -47,7 +46,7 @@ const Mobile = () => {
                         {item.children.map(subItem => (
                           <div
                             onClick={() => close()}
-                            key={uuidv4()}
+                            key={subItem.link}
                             className="flex ml-3 px-1 items-center rounded-md"
                           >
                             {subItem.external ? (
