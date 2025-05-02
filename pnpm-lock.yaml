@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@algolia/autocomplete-theme-classic':
-        specifier: ^1.6.3
-        version: 1.7.1
       '@docsearch/css':
         specifier: ^3.2.1
         version: 3.2.1
@@ -125,9 +122,6 @@ importers:
         version: 4.8.4
 
 packages:
-
-  '@algolia/autocomplete-theme-classic@1.7.1':
-    resolution: {integrity: sha512-Uh2AuRMjgbwCgOQX+oZQ5RIaqIDZ2os4EDZd3WClnIYQl03VTvSD/JRPmlz/+agWpfoN/fX8XvmLUGt/d4DbYg==}
 
   '@ampproject/remapping@2.2.0':
     resolution: {integrity: sha512-qRmjj8nj9qmLTQXXmaR1cck3UXSRMPrbsLJAasZpF+t3riI71BXed5ebIOYwQntykeZuhjsdweEc9BxH5Jc26w==}
@@ -4824,8 +4818,6 @@ packages:
         optional: true
 
 snapshots:
-
-  '@algolia/autocomplete-theme-classic@1.7.1': {}
 
   '@ampproject/remapping@2.2.0':
     dependencies:

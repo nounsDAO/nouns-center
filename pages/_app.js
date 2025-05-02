@@ -1,7 +1,6 @@
 import 'tailwindcss/tailwind.css';
 import '../styles/globals.css';
 import Layout from '../components/Layout';
-import '@algolia/autocomplete-theme-classic';
 
 import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { publicProvider } from 'wagmi/providers/public';
@@ -20,16 +19,6 @@ const wagmiClient = createClient({
   connectors,
   provider,
 });
-
-// const searchClient = algoliasearch(
-//   "PGIH0KF5F5",
-//   "faf1987de1d83c02e82fbf9bfd7ca5a9"
-// );
-
-// autocomplete({
-//   container: "#autocomplete",
-//   placeholder: "Search repositories",
-// });
 
 function MyApp({ Component, pageProps }) {
   return (

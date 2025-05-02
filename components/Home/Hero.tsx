@@ -4,19 +4,6 @@ import Footer from '../Footer';
 import NavSection from './NavSection';
 import navigationData from '../Navigation/navigation.json';
 import NavCard from './NavCard';
-import '@algolia/autocomplete-theme-classic';
-// import algoliasearch from 'algoliasearch/lite';
-// import { autocomplete, getAlgoliaResults } from '@algolia/autocomplete-js';
-
-// const searchClient = algoliasearch(
-//   "PGIH0KF5F5",
-//   "faf1987de1d83c02e82fbf9bfd7ca5a9"
-// );
-
-// autocomplete({
-//   container: "#autocomplete",
-//   placeholder: "Search the Nouniverse",
-// });
 
 const Hero = () => {
   return (
