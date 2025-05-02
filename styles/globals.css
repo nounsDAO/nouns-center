@@ -39,9 +39,6 @@
   .bg-gradient3 {
     @apply bg-black sm:bg-opacity-100 dark:bg-black dark:bg-opacity-10;
   }
-  .DocSearch-Container {
-    @apply bg-white bg-opacity-40 dark:bg-black dark:bg-opacity-10 !important;
-  }
 }
 @font-face {
   font-family: 'CalSans';
@@ -378,12 +375,6 @@ h6 {
   z-index: 2;
 }
 
-.DocSearch-Button {
-  @apply bg-grey-lighter !important;
-}
-.DocSearch-Container {
-  @apply bg-white bg-opacity-90 dark:bg-black dark:bg-opacity-70 !important;
-}
 .vertical-timeline-element-date {
   @apply text-black;
 }
