@@ -23,15 +23,15 @@ const Mobile = () => {
                         as="button"
                         className={classNames(
                           item.current
-                            ? 'text-black focus:outline-none'
+                            ? 'text-black focus:outline-hidden'
                             : 'text-black hover:bg-opacity-80  hover:text-blue-base',
-                          'group w-full flex items-center text-nouns tracking-wide text-left xs:text-lg sm:text-lg font-medium rounded-md focus:outline-none transition duration-150',
+                          'group w-full flex items-center text-nouns tracking-wide text-left xs:text-lg sm:text-lg font-medium rounded-md focus:outline-hidden transition duration-150',
                         )}
                       >
                         <svg
                           className={classNames(
                             open2 ? 'text-black rotate-90' : 'text-black',
-                            'flex-shrink-0 h-5 w-5 transform group-hover:text-blue-base transition duration-150',
+                            'shrink-0 h-5 w-5 transform group-hover:text-blue-base transition duration-150',
                           )}
                           viewBox="0 0 20 20"
                           aria-hidden="true"
@@ -55,7 +55,7 @@ const Mobile = () => {
                                 href={subItem.link}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="focus:outline-none group w-full flex items-center pr-2 pl-2 py-0.5 text-sm font-medium text-nouns-black hover:text-blue-base gap-1"
+                                className="focus:outline-hidden group w-full flex items-center pr-2 pl-2 py-0.5 text-sm font-medium text-nouns-black hover:text-blue-base gap-1"
                               >
                                 {subItem.name}
 
@@ -64,7 +64,7 @@ const Mobile = () => {
                             ) : (
                               <Link
                                 href={subItem.link}
-                                className="focus:outline-none group w-full flex items-center pr-2 pl-2 py-0.5 text-sm font-medium text-nouns-black hover:text-blue-base ">
+                                className="focus:outline-hidden group w-full flex items-center pr-2 pl-2 py-0.5 text-sm font-medium text-nouns-black hover:text-blue-base ">
 
                                 {subItem.name}
 

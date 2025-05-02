@@ -34,7 +34,7 @@ const Table = ({ groups }: Groups) => {
       <div className="mt-8 flex flex-col">
         <div className="-my-2 -mx-4  sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 align-middle">
-            <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg">
+            <div className="overflow-hidden shadow-sm ring-1 ring-black ring-opacity-5 rounded-lg">
               <table className="min-w-full divide-y divide-gray-300 ">
                 <thead className="bg-gray-50">
                   <tr>
@@ -60,7 +60,7 @@ const Table = ({ groups }: Groups) => {
                       <tr key={group.id}>
                         <td className=" py-4 pl-4 pr-3 text-sm sm:pl-6">
                           <div className="flex items-center">
-                            <div className="h-14 w-14 flex-shrink-0 xs:hidden sm:flex">
+                            <div className="h-14 w-14 shrink-0 xs:hidden sm:flex">
                               <img
                                 className="h-14 w-14 rounded-full"
                                 src={group.Logo ? group.Logo[0].url : './loadingnoun.jpg'}
@@ -78,7 +78,7 @@ const Table = ({ groups }: Groups) => {
                                     group.Topics.map(topic => (
                                       <span
                                         key={topic}
-                                        className="flex-shrink-0 ml-1.5 inline-block px-2 py-0.5 text-green-800 text-xs font-medium bg-green-100 rounded-full lowercase text"
+                                        className="shrink-0 ml-1.5 inline-block px-2 py-0.5 text-green-800 text-xs font-medium bg-green-100 rounded-full lowercase text"
                                       >
                                         {topic}
                                       </span>

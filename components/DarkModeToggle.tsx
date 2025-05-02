@@ -42,7 +42,7 @@ const ThemeSwitch = () => {
       <Switch
         onChange={toggleMode}
         checked={darkModeActive}
-        className="flex-shrink-0 group relative rounded-full inline-flex items-center justify-center h-5 w-10 cursor-pointer"
+        className="shrink-0 group relative rounded-full inline-flex items-center justify-center h-5 w-10 cursor-pointer"
       >
         <span className="sr-only">Use setting</span>
         <span
@@ -60,7 +60,7 @@ const ThemeSwitch = () => {
           aria-hidden="true"
           className={classNames(
             darkModeActive ? 'translate-x-5' : '-translate-x-2',
-            'pointer-events-none absolute left-0 inline-block h-8 w-8  rounded-full  shadow transform ring-0 transition-transform ease-in-out duration-200',
+            'pointer-events-none absolute left-0 inline-block h-8 w-8  rounded-full  shadow-sm transform ring-0 transition-transform ease-in-out duration-200',
           )}
         >
           <img

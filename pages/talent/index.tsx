@@ -36,14 +36,14 @@ const Talent = () => {
                     </h3>
 
                     {person.title.length <= 1 ? (
-                      <span className="flex-shrink-0 inline-block px-2 py-0.5 text-green-800 text-xs font-medium bg-green-100 rounded-full lowercase text">
+                      <span className="shrink-0 inline-block px-2 py-0.5 text-green-800 text-xs font-medium bg-green-100 rounded-full lowercase text">
                         {person.title}
                       </span>
                     ) : (
                       person.title.map(t => (
                         <span
                           key={person.name + person.title}
-                          className="flex-shrink-0 inline-block px-2 py-0.5 text-green-800 text-xs font-medium bg-green-100 rounded-full lowercase text"
+                          className="shrink-0 inline-block px-2 py-0.5 text-green-800 text-xs font-medium bg-green-100 rounded-full lowercase text"
                         >
                           {t}
                         </span>
@@ -54,7 +54,7 @@ const Talent = () => {
                   <p className="mt-1 text-gray-500 text-sm ">{person.skills}</p>
                 </div>
                 <img
-                  className="w-16 h-16 bg-gray-300 rounded-full flex-shrink-0"
+                  className="w-16 h-16 bg-gray-300 rounded-full shrink-0"
                   src={getRandomNounPic(idx)}
                   alt=""
                 />

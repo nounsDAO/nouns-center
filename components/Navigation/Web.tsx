@@ -15,14 +15,14 @@ function classNames(...classes) {
 const Web = () => {
   return (
     <>
-      <Disclosure as="nav" className="bg-white shadow sm:sticky sm:top-0 sm:z-10	">
+      <Disclosure as="nav" className="bg-white shadow-sm sm:sticky sm:top-0 sm:z-10	">
         {({ open }) => (
           <>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
               <div className="flex justify-between h-16">
                 {/* MOBILE EXPAND ICON */}
                 <div className="flex items-center sm:hidden">
-                  <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-hidden focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
                       <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -33,7 +33,7 @@ const Web = () => {
                 </div>
 
                 <div
-                  className="flex-shrink-0 flex items-center cursor-pointer"
+                  className="shrink-0 flex items-center cursor-pointer"
                   onClick={() => close()}
                 >
                   {/* eslint-disable @next/next/no-html-link-for-pages */}
@@ -65,7 +65,7 @@ const Web = () => {
                         leaveFrom="transform opacity-100 scale-100"
                         leaveTo="transform opacity-0 scale-95"
                       >
-                        <Menu.Items className="origin-top-right absolute right-0 mt-12	w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <Menu.Items className="origin-top-right absolute right-0 mt-12	w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-hidden">
                           <div className="py-1">
                             {section.children.map(subItem => (
                               <Menu.Item key={subItem.name}>
@@ -93,7 +93,7 @@ const Web = () => {
                   ))}
                 </div>
 
-                <div className="flex items-center flex-shrink-0">
+                <div className="flex items-center shrink-0">
                   <Button
                     link="https://nouns.wtf/"
                     text="Nouns.wtf"

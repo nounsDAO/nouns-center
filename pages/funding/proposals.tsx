@@ -152,7 +152,7 @@ const proposals = () => {
                         key={prop.title}
                         className="flex flex-col rounded-lg shadow-lg overflow-hidden"
                       >
-                        <div className="flex-shrink-0">
+                        <div className="shrink-0">
                           <a href={prop.href} target="_blank" rel="noreferrer">
                             <img className="h-48 w-full object-cover" src={prop.imageUrl} alt="" />
                           </a>
@@ -172,7 +172,7 @@ const proposals = () => {
                             </a>
                           </div>
                           <div className="mt-6 flex items-center">
-                            <div className="flex-shrink-0">
+                            <div className="shrink-0">
                               <a href={prop.author.href} target="_blank" rel="noreferrer">
                                 <span className="sr-only">{prop.author.name}</span>
                                 <img

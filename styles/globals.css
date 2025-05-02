@@ -1,43 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap')
+layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@layer components {
-  .ideaCard a {
+@config '../tailwind.config.js';
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility ideaCard {
+  & a {
     @apply text-blue-base hover:text-black dark:text-nouns-bg-blue dark:hover:text-blue-700 transition duration-100 underline text-nouns tracking-wider;
   }
+}
 
-  .notion {
-    @apply text-black  caret-black;
-  }
-  .notion-text,
-  .notion-code {
-    @apply whitespace-normal;
-  }
-  .notion li {
+@utility notion {
+  @apply text-black  caret-black;
+  & li {
     @apply text-black whitespace-pre-wrap;
   }
+}
 
-  .introNouns {
-    @apply text-black;
-  }
-  .introNouns .notion-h1,
-  .notion-h2,
-  .notion-h3 {
-    @apply text-black;
-  }
-  .introNouns .notion-text {
-    @apply text-black;
-  }
-  .introNouns .notion-row {
-    @apply text-black;
-  }
-  .introNouns .notion-callout-text {
+@utility notion-text {
+  @apply whitespace-normal;
+  .introNouns & {
     @apply text-black;
   }
 }
+
+@utility notion-code {
+  @apply whitespace-normal;
+}
+
+@utility introNouns {
+  @apply text-black;
+  & .notion-h1 {
+    @apply text-black;
+  }
+  & .notion-text {
+    @apply text-black;
+  }
+  & .notion-row {
+    @apply text-black;
+  }
+  & .notion-callout-text {
+    @apply text-black;
+  }
+}
+
+@utility notion-h1 {
+  .introNouns & {
+    @apply text-black;
+  }
+}
+
+@utility notion-h2 {
+  @apply text-black;
+}
+
+@utility notion-h3 {
+  @apply text-black;
+}
+
+@utility notion-row {
+  .introNouns & {
+    @apply text-black;
+  }
+}
+
+@utility notion-callout-text {
+  .introNouns & {
+    @apply text-black;
+  }
+}
+
 @font-face {
   font-family: 'CalSans';
   src: local('CalSans'), url('/fonts/CalSans.woff2') format('woff2');
@@ -348,8 +399,8 @@ h6 {
 }
 
 .devNotion .notion-code code {
-  flex-grow: 1;
-  flex-shrink: 1;
+  grow: 1;
+  shrink: 1;
   text-align: left;
   font-family: SFMono-Regular, Menlo, Consolas, 'PT Mono', 'Liberation Mono', Courier, monospace;
   font-size: 85%;

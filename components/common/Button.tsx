@@ -39,7 +39,7 @@ const Button = ({ link, text, download, self, small, className }: ButtonProps) =
         shadow-sm
         transition
         duration-100
-        focus:outline-none
+        focus:outline-hidden
         focus:ring-2
         focus:ring-offset-2
         sm:w-auto

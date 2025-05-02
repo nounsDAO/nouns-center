@@ -86,7 +86,7 @@ const ProjectDetails = ({ projectData }) => {
 
               <div
                 aria-hidden="true"
-                className="bg-gradient-to-b from-transparent to-black opacity-50"
+                className="bg-linear-to-b from-transparent to-black opacity-50"
               />
 
               <div className="p-6 flex items-end">
@@ -113,7 +113,7 @@ const ProjectDetails = ({ projectData }) => {
               />
               <div
                 aria-hidden="true"
-                className="bg-gradient-to-b from-transparent to-black opacity-50 sm:absolute sm:inset-0"
+                className="bg-linear-to-b from-transparent to-black opacity-50 sm:absolute sm:inset-0"
               />
 
               <div className="p-6 flex items-end sm:absolute sm:inset-0 xs:text-black sm:text-white">
@@ -144,7 +144,7 @@ const ProjectDetails = ({ projectData }) => {
 
               <div
                 aria-hidden="true"
-                className="bg-gradient-to-b from-transparent to-black opacity-50 sm:absolute sm:inset-0"
+                className="bg-linear-to-b from-transparent to-black opacity-50 sm:absolute sm:inset-0"
               />
 
               <div className="p-6 flex items-end sm:absolute sm:inset-0">
