@@ -12,6 +12,7 @@ module.exports = {
         sans: ['PTRootUI', 'Roboto', 'ui-sans-serif', 'system-ui'],
       },
       colors: {
+        nouns: '#292929',
         'nouns-bg-black': '#2C2C2C',
         'nouns-bg-darkgrey': '#151515',
         'nouns-text-grey': '#D0D0D0',
