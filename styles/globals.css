@@ -378,9 +378,7 @@ h6 {
 .vertical-timeline:before {
   background: #ebebeb !important;
 }
-.vertical-timeline.vertical-timeline--two-columns:before.vertical-timeline:before {
-  background: #ebebeb !important;
-}
+
 .vertical-timeline-element-icon {
   box-shadow: none !important;
   outline: 4px solid #ebebeb;
