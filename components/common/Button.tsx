@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '../../lib/cn';
 
 interface ButtonProps {
   link: string;
@@ -6,16 +7,18 @@ interface ButtonProps {
   download?: boolean;
   self?: boolean;
   small?: boolean;
+  className?: string;
 }
 
-const Button = ({ link, text, download, self, small }: ButtonProps) => {
+const Button = ({ link, text, download, self, small, className }: ButtonProps) => {
   return (
     <a
       download={download && download}
       href={link}
       target={self ? '_self' : '_blank'}
       rel="noreferrer"
-      className={`
+      className={cn(
+        `
         inline-flex
         capitalize
         items-center
@@ -40,7 +43,9 @@ const Button = ({ link, text, download, self, small }: ButtonProps) => {
         focus:ring-2
         focus:ring-offset-2
         sm:w-auto
-      `}
+      `,
+        className,
+      )}
     >
       {text}
     </a>
