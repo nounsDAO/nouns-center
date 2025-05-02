@@ -9,7 +9,7 @@
     "format-check": "prettier --check \"**/*.ts\" \"**/*.tsx\" \"**/*.js\""
   },
   "dependencies": {
-    "@headlessui/react": "^0.0.0-insiders.fc7def3",
+    "@headlessui/react": "^2.2.2",
     "@heroicons/react": "^1.0.5",
     "clsx": "^2.1.1",
     "next": "15.3.1",
