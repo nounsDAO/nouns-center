@@ -14,9 +14,6 @@ importers:
       '@heroicons/react':
         specifier: ^1.0.5
         version: 1.0.6(react@17.0.2)
-      classnames:
-        specifier: ^2.3.1
-        version: 2.3.2
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
