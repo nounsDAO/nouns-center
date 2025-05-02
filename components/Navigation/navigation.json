@@ -2,7 +2,7 @@
   {
     "name": "About Nouns",
     "title": "Learn about Nouns",
-    "description": "Learn about the Nouns project, the ecosystem and community.",
+    "description": "Learn about the Nouns project.",
     "defaultOpen": true,
     "current": false,
     "children": [
@@ -17,13 +17,8 @@
         "external": false
       },
       {
-        "name": "History",
-        "link": "/history",
-        "external": false
-      },
-      {
-        "name": "Groups",
-        "link": "/groups",
+        "name": "Proposals",
+        "link": "/funding/proposals",
         "external": false
       }
     ]
@@ -46,77 +41,9 @@
         "external": true
       },
       {
-        "name": "Dev FAQ",
-        "link": "https://github.com/nounsDAO/nouns-monorepo/discussions",
-        "external": true
-      },
-      {
         "name": "Dev Resources",
         "link": "/dev",
         "external": false
-      }
-    ]
-  },
-  {
-    "name": "Get Funding",
-    "title": "Get Funded",
-    "description": "Learn about getting funded by Nouns and apply.",
-    "current": false,
-    "defaultOpen": true,
-    "children": [
-      {
-        "name": "Overview",
-        "link": "/funding",
-        "external": false
-      },
-      {
-        "name": "Small Grants",
-        "link": "/funding/smallgrants",
-        "external": false
-      },
-      {
-        "name": "Prop House",
-        "link": "/funding/prophouse",
-        "external": false
-      },
-      {
-        "name": "Proposals",
-        "link": "/funding/proposals",
-        "external": false
-      }
-    ]
-  },
-  {
-    "name": "Community",
-    "title": "Community",
-    "description": "Meet the growing list of projects and members of the Nouns ecosystem.",
-    "current": false,
-    "defaultOpen": true,
-    "children": [
-      {
-        "name": "Projects",
-        "link": "/projects",
-        "external": false
-      },
-      {
-        "name": "Talent",
-        "link": "/talent",
-        "external": false
-      },
-      {
-        "name": "Learn",
-        "link": "/learn",
-        "external": false
-      },
-      {
-        "name": "Podcast",
-        "link": "http://nounotalk.com/",
-        "external": true
-      },
-      {
-        "name": "Blog",
-        "link": "https://nouns.blog/",
-        "external": true
       }
     ]
   }

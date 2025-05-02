@@ -18,15 +18,6 @@
     "notionId": ""
   },
   {
-    "name": "Nouns Frontend Stream",
-    "imageUrl": "stream.png",
-    "bio": "Going over the Nouns Frontend and deploying to IPFS.",
-    "url": "https://nounish.tv/w/wetmy9J6oW4C4Pao5ZjnZk",
-    "btnText": "Watch Stream",
-    "notion": false,
-    "notionId": ""
-  },
-  {
     "name": "Smart Contract Architecture",
     "imageUrl": "smartcontract.png",
     "bio": "NounsToken, NounsSeeder, NounsDescriptor, NounsAuctionHouse, NounsDAOExecutor, NounsDAOProxy, and NounsDAOLogicV1.",
@@ -45,19 +36,10 @@
     "notionId": ""
   },
   {
-    "name": "Noun API",
-    "imageUrl": "nounapi.png",
-    "bio": "A free service that enables builders to integrate Nouns into their projects with only a url.",
-    "url": "https://noun-api.com/",
-    "btnText": "Read Docs",
-    "notion": false,
-    "notionId": ""
-  },
-  {
     "name": "Subgraph",
     "imageUrl": "subgraph.png",
     "bio": "Subgraph for Nouns proposals & auctions.",
-    "url": "https://thegraph.com/hosted-service/subgraph/nounsdao/nouns-subgraph",
+    "url": "https://thegraph.com/explorer/subgraphs/5qcR6rAfDMZCVGuZ6DDois7y4zyXqsyqvaqhE6NRRraW",
     "btnText": "Read More",
     "notion": false,
     "notionId": ""
@@ -68,24 +50,6 @@
     "bio": "Explore how to generate a pseudo-random noun, fully on-chain, with just two contract calls.",
     "url": "https://nouns.notion.site/Generate-a-random-Noun-on-chain-4235479b512741289ede4cd22954cffc",
     "btnText": "Read More",
-    "notion": false,
-    "notionId": ""
-  },
-  {
-    "name": "The Noun Crystal Ball",
-    "imageUrl": "crystal.png",
-    "bio": "What a Noun looks like is based on its Noun ID and the block before the auction was settled so we can predict what the next Noun will look like.",
-    "url": "https://observablehq.com/@gitblamecarrot/the-noun-crystal-ball",
-    "btnText": "Read More",
-    "notion": false,
-    "notionId": ""
-  },
-  {
-    "name": "Dev FAQ",
-    "imageUrl": "discussions.png",
-    "bio": "Ask technical questions you're wondering about, or engage with other community members.",
-    "url": "https://github.com/nounsDAO/nouns-monorepo/discussions",
-    "btnText": "View FAQs",
     "notion": false,
     "notionId": ""
   }
