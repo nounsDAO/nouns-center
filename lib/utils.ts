@@ -1,19 +1,3 @@
-import jwt from 'jsonwebtoken';
-
-interface JwtPayload {
-  eoa: string;
-}
-
-export async function verifyToken(token) {
-  if (token) {
-    const decodedToken = jwt.verify(token, process.env.JWT_SECRET) as JwtPayload;
-
-    return decodedToken?.eoa;
-  }
-
-  return null;
-}
-
 /**
  * Truncates an ethereum address to the format 0x0000…0000
  * @param address Full address to truncate
