@@ -1,16 +1,8 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 
 const Footer = () => {
-  const router = useRouter();
-  const { asPath } = router;
-
   return (
     <div className="relative xs:px-6 sm:px-0 text-black font-medium gap-2 items-center w-full flex flex-col text-center pb-6">
-      {asPath === '/' && (
-        <p>Nouns Center serves as the knowledge center &#38; resource hub for Nouns DAO</p>
-      )}
-
       <div className="flex gap-8 items-center">
         {/* Twitter */}
         <a href="https://twitter.com/nounsdao" target="_blank" rel="noreferrer">
