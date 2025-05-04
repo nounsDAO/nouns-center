@@ -1,3 +1,5 @@
+'use client';
+
 /* eslint-disable @next/next/no-img-element */
 import { Switch } from '@headlessui/react';
 import { useEffect, useState } from 'react';
