@@ -5,7 +5,7 @@ import { getRandomNounPic } from '../../utils';
 export const NavCard: React.FC<{
   text: string;
   path: string;
-  i: any;
+  i: number;
 }> = ({ text, path, i }) => {
   return (
     <Link passHref href={`${path}`} className="hover:scale-[1.02] transition">

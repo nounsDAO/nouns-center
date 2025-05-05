@@ -48,12 +48,54 @@ export default defineConfig({
             required: true,
           },
           {
-            type: "rich-text",
+            type: "string",
             name: "description",
             label: "Description",
             isBody: true,
           },
         ],
+        ui: {
+          // This is an DEMO router. You can remove this to fit your site
+          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
+        },
+      },
+      {
+        name: "resource",
+        label: "Resources",
+        path: "content/resources",
+        templates: [
+          {
+            name: 'link',
+            label: 'Link',
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Title",
+                isTitle: true,
+                required: true,
+              },
+              {
+                type: "string",
+                name: "link",
+                label: "Link",
+              },
+              {
+                type: 'boolean',
+                name: 'isExternal',
+                label: 'External Link',
+                description: 'If true, the link will open in a new tab',
+              },
+              {
+                label: 'Category',
+                name: 'category',
+                type: 'reference',
+                collections: ['category'],
+              },
+            ],
+          },
+        ],
+
         ui: {
           // This is an DEMO router. You can remove this to fit your site
           router: ({ document }) => `/demo/blog/${document._sys.filename}`,

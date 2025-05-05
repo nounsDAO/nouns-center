@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import React from 'react';
 import { BiLinkExternal as ExternalIcon } from 'react-icons/bi';
@@ -64,10 +66,9 @@ const Mobile = () => {
                             ) : (
                               <Link
                                 href={subItem.link}
-                                className="focus:outline-hidden group w-full flex items-center pr-2 pl-2 py-0.5 text-sm font-medium text-nouns-black hover:text-blue-base ">
-
+                                className="focus:outline-hidden group w-full flex items-center pr-2 pl-2 py-0.5 text-sm font-medium text-nouns-black hover:text-blue-base "
+                              >
                                 {subItem.name}
-
                               </Link>
                             )}
                           </div>

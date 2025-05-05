@@ -1,21 +1,24 @@
 'use client';
 
-/* eslint-disable @next/next/no-img-element */
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Button from '../common/Button';
-import navigationData from './navigation.json';
+// import navigationData from './navigation.json';
 import MobileNavigation from './Mobile';
 import { Fragment } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 import { BiLinkExternal as ExternalIcon } from 'react-icons/bi';
 import Link from 'next/link';
+import {
+  CategoriesWithResources,
+  getCategoriesAndResources,
+} from '@/actions/getCategoriesAndResources';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-const Web = () => {
+const Web = ({ categoriesWithResources }: { categoriesWithResources: CategoriesWithResources }) => {
   return (
     <>
       <Disclosure
@@ -47,14 +50,14 @@ const Web = () => {
 
                 {/* DESKTOP MENU */}
                 <div className="hidden md:ml-6 sm:flex md:space-x-8 gap-4">
-                  {navigationData.map(section => (
+                  {categoriesWithResources.map(category => (
                     <Menu
                       as="div"
                       className="relative flex text-left hover:text-blue-base"
-                      key={section.name}
+                      key={category.id}
                     >
                       <Menu.Button className="inline-flex justify-center items-center h-full m-auto">
-                        {section.name}
+                        {category.label}
                         <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
                       </Menu.Button>
 
@@ -69,21 +72,21 @@ const Web = () => {
                       >
                         <Menu.Items className="origin-top-right absolute right-0 mt-12	w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-hidden">
                           <div className="py-1">
-                            {section.children.map(subItem => (
-                              <Menu.Item key={subItem.name}>
+                            {category.resources.map(resource => (
+                              <Menu.Item key={resource?.title}>
                                 {({ active }) => (
                                   <a
-                                    href={subItem.link}
+                                    href={resource!.link!}
                                     className={classNames(
                                       active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                       'block px-4 py-2 text-sm',
-                                      subItem.external && 'flex items-center gap-2',
+                                      resource?.isExternal && 'flex items-center gap-2',
                                     )}
-                                    target={subItem.external ? '_blank' : '_self'}
+                                    target={resource?.isExternal ? '_blank' : '_self'}
                                     rel="noreferrer"
                                   >
-                                    {subItem.name}
-                                    {subItem.external && <ExternalIcon />}
+                                    {resource?.title}
+                                    {resource?.isExternal && <ExternalIcon />}
                                   </a>
                                 )}
                               </Menu.Item>

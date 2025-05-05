@@ -2,10 +2,11 @@
 import React from 'react';
 import Footer from '../Footer';
 import NavSection from './NavSection';
-import navigationData from '../Navigation/navigation.json';
 import NavCard from './NavCard';
+import { getCategoriesAndResources } from '@/actions/getCategoriesAndResources';
 
-const Hero = () => {
+const Hero = async () => {
+  const categoriesWithResources = await getCategoriesAndResources();
   return (
     <>
       <div className="pt-10">
@@ -23,15 +24,20 @@ const Hero = () => {
             {/* <div className="mt-6 sm:mb-14" id="autocomplete"></div> */}
           </div>
 
-          {navigationData.map(section => (
+          {categoriesWithResources.map((category, i) => (
             <NavSection
-              key={section.name}
+              key={category.id}
               // @ts-ignore
-              title={section.title}
+              title={category.title}
               // @ts-ignore
-              body={section.description}
-              cards={section.children.map((page, i) => (
-                <NavCard path={page.link} key={i} text={page.name} i={page.link} />
+              body={category.description}
+              cards={category.resources.map((resource, j) => (
+                <NavCard
+                  path={resource!.link!}
+                  key={resource?.id}
+                  text={resource!.title}
+                  i={10 * i + j}
+                />
               ))}
             />
           ))}

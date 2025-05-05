@@ -2,13 +2,15 @@ import Navigation from '@/components/Navigation/Web';
 import '../styles/globals.css';
 import Head from 'next/head';
 import { Metadata } from 'next';
+import { getCategoriesAndResources } from '@/actions/getCategoriesAndResources';
 
 export const metadata: Metadata = {
   title: 'Home',
   description: 'Welcome to Next.js',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const categoriesWithResources = await getCategoriesAndResources();
   return (
     <html id="parent" lang="en">
       <Head>
@@ -18,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </Head>
       <body className="bg-grey-lightest text-black">
-        <Navigation />
+        <Navigation categoriesWithResources={categoriesWithResources} />
 
         <div className=" flex flex-col flex-1 flex-between h-auto text-black m-auto">
           <main className="w-full  max-w-5xl	m-auto DocSearch-content">
