@@ -5,28 +5,31 @@ import React from 'react';
 import { BiLinkExternal as ExternalIcon } from 'react-icons/bi';
 import { Disclosure } from '@headlessui/react';
 import navigationData from './navigation.json';
+import { CategoriesWithResources } from '@/actions/getCategoriesAndResources';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-const Mobile = () => {
+const Mobile = ({
+  categoriesWithResources,
+}: {
+  categoriesWithResources: CategoriesWithResources;
+}) => {
   return (
     <Disclosure.Panel className="sm:hidden">
       <div className="pt-2 px-4 pb-3 space-y-1">
         <Disclosure.Panel>
           {({ close }) => (
             <div>
-              {navigationData.map(item => (
-                <Disclosure as="div" defaultOpen key={item.name} className="space-y-1 mb-4">
+              {categoriesWithResources.map(category => (
+                <Disclosure as="div" defaultOpen key={category.id} className="space-y-1 mb-4">
                   {({ open: open2 }) => (
                     <>
                       <Disclosure.Button
                         as="button"
                         className={classNames(
-                          item.current
-                            ? 'text-black focus:outline-hidden'
-                            : 'text-black hover:bg-opacity-80  hover:text-blue-base',
+                          'text-black focus:outline-hidden',
                           'group w-full flex items-center text-nouns tracking-wide text-left xs:text-lg sm:text-lg font-medium rounded-md focus:outline-hidden transition duration-150',
                         )}
                       >
@@ -41,34 +44,34 @@ const Mobile = () => {
                           <path d="M6 6L14 10L6 14V6Z" fill="currentColor" />
                         </svg>
 
-                        <span className="flex-1 text-xl">{item.name}</span>
+                        <span className="flex-1 text-xl">{category.label}</span>
                       </Disclosure.Button>
 
                       <Disclosure.Panel className="space-y-1">
-                        {item.children.map(subItem => (
+                        {category.resources.map(resource => (
                           <div
                             onClick={() => close()}
-                            key={subItem.link}
+                            key={resource?.id}
                             className="flex ml-3 px-1 items-center rounded-md"
                           >
-                            {subItem.external ? (
+                            {resource?.__typename === 'ResourceLink' && resource.isExternal ? (
                               <Disclosure.Button
                                 as="a"
-                                href={subItem.link}
+                                href={resource.link}
                                 target="_blank"
                                 rel="noreferrer"
                                 className="focus:outline-hidden group w-full flex items-center pr-2 pl-2 py-0.5 text-sm font-medium text-nouns-black hover:text-blue-base gap-1"
                               >
-                                {subItem.name}
+                                {resource.title}
 
                                 <ExternalIcon />
                               </Disclosure.Button>
                             ) : (
                               <Link
-                                href={subItem.link}
+                                href={resource.link!}
                                 className="focus:outline-hidden group w-full flex items-center pr-2 pl-2 py-0.5 text-sm font-medium text-nouns-black hover:text-blue-base "
                               >
-                                {subItem.name}
+                                {resource?.title}
                               </Link>
                             )}
                           </div>

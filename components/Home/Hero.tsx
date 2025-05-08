@@ -33,7 +33,7 @@ const Hero = async () => {
               body={category.description}
               cards={category.resources.map((resource, j) => (
                 <NavCard
-                  path={resource!.link!}
+                  path={resource.link!}
                   key={resource?.id}
                   text={resource!.title}
                   i={10 * i + j}
@@ -43,8 +43,6 @@ const Hero = async () => {
           ))}
         </main>
       </div>
-
-      <Footer />
     </>
   );
 };

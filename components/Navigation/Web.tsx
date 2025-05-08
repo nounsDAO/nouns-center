@@ -3,16 +3,12 @@
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Button from '../common/Button';
-// import navigationData from './navigation.json';
 import MobileNavigation from './Mobile';
 import { Fragment } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 import { BiLinkExternal as ExternalIcon } from 'react-icons/bi';
 import Link from 'next/link';
-import {
-  CategoriesWithResources,
-  getCategoriesAndResources,
-} from '@/actions/getCategoriesAndResources';
+import { CategoriesWithResources } from '@/actions/getCategoriesAndResources';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -76,17 +72,24 @@ const Web = ({ categoriesWithResources }: { categoriesWithResources: CategoriesW
                               <Menu.Item key={resource?.title}>
                                 {({ active }) => (
                                   <a
-                                    href={resource!.link!}
+                                    href={resource.link!}
                                     className={classNames(
                                       active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                       'block px-4 py-2 text-sm',
-                                      resource?.isExternal && 'flex items-center gap-2',
+                                      resource?.__typename === 'ResourceLink' &&
+                                        resource.isExternal &&
+                                        'flex items-center gap-2',
                                     )}
-                                    target={resource?.isExternal ? '_blank' : '_self'}
+                                    target={
+                                      resource?.__typename === 'ResourceLink' && resource.isExternal
+                                        ? '_blank'
+                                        : '_self'
+                                    }
                                     rel="noreferrer"
                                   >
                                     {resource?.title}
-                                    {resource?.isExternal && <ExternalIcon />}
+                                    {resource?.__typename === 'ResourceLink' &&
+                                      resource.isExternal && <ExternalIcon />}
                                   </a>
                                 )}
                               </Menu.Item>
@@ -110,7 +113,7 @@ const Web = ({ categoriesWithResources }: { categoriesWithResources: CategoriesW
             </div>
 
             {/* MOBILE MENU */}
-            <MobileNavigation />
+            <MobileNavigation categoriesWithResources={categoriesWithResources} />
           </>
         )}
       </Disclosure>
