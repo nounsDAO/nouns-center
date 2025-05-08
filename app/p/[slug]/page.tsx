@@ -31,6 +31,16 @@ const components = {
   },
 };
 
+export const generateMetadata = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params;
+  const article = (
+    await client.queries.resourceConnection({ filter: { article: { slug: { eq: slug } } } })
+  ).data.resourceConnection.edges![0]?.node as ResourceArticle;
+  return {
+    title: `${article?.title} | Nouns Center`,
+  };
+};
+
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const articles = (
