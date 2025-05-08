@@ -72,11 +72,10 @@ body {
 }
 
 h1 {
-  font-size: 56px;
+  @apply text-5xl tracking-wide font-londrina;
 }
 h2 {
-  font-size: 40px;
-  letter-spacing: 0.01em;
+  @apply text-3xl tracking-wide font-londrina;
 }
 h3 {
   font-size: 36px;
