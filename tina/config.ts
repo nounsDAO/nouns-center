@@ -1,4 +1,4 @@
-import { defineConfig } from "tinacms";
+import { defineConfig, defineStaticConfig } from "tinacms";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -34,6 +34,13 @@ export default defineConfig({
         path: "content/categories",
         fields: [
           {
+            type: "number",
+            name: "precedence",
+            label: "Precedence",
+            description: "The priority of the category in the navigation. Lower numbers are higher in the navigation.",
+            required: true,
+          },
+          {
             type: "string",
             name: "label",
             label: "Label",
@@ -63,6 +70,7 @@ export default defineConfig({
         name: "resource",
         label: "Resources",
         path: "content/resources",
+        format: "mdx",
         templates: [
           {
             name: 'link',
@@ -79,6 +87,7 @@ export default defineConfig({
                 type: "string",
                 name: "link",
                 label: "Link",
+                required: true,
               },
               {
                 type: 'boolean',
@@ -91,15 +100,55 @@ export default defineConfig({
                 name: 'category',
                 type: 'reference',
                 collections: ['category'],
+                required: true,
+              },
+            ],
+          },
+          {
+            name: 'article',
+            label: 'Article',
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Title",
+                isTitle: true,
+                required: true,
+              },
+              {
+                type: "string",
+                name: "slug",
+                label: "Slug",
+                required: true,
+              },
+              {
+                type: "rich-text",
+                name: "content",
+                label: "Content",
+                isBody: true,
+                required: true,
+                templates: [
+                  {
+                    name: "Youtube",
+                    label: "Youtube",
+                    fields: [{
+                      name: "videoId",
+                      label: "Video ID (e.g. LNR1TIxNjvs)",
+                      type: "string"
+                    }]
+                  }
+                ]
+              },
+              {
+                label: 'Category',
+                name: 'category',
+                type: 'reference',
+                collections: ['category'],
+                required: true,
               },
             ],
           },
         ],
-
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
-        },
       },
     ],
   },
