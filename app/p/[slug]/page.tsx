@@ -55,7 +55,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   }
   const { content, title } = article;
   return (
-    <div className="prose mx-auto mb-24">
+    <div className="prose mx-auto mb-24 mt-16">
+      <h1>{title}</h1>
       <TinaMarkdown content={content} components={components} />
     </div>
   );
