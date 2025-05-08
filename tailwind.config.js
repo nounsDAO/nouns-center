@@ -10,6 +10,7 @@ module.exports = {
         cal: ['CalSans'],
         root: ['PTRootUI'],
         sans: ['PTRootUI', 'Roboto', 'ui-sans-serif', 'system-ui'],
+        londrina: [`var(--font-londrina-solid)`],
       },
       colors: {
         nouns: '#292929',

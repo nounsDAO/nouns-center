@@ -4,6 +4,12 @@ import Head from 'next/head';
 import { Metadata } from 'next';
 import { getCategoriesAndResources } from '@/actions/getCategoriesAndResources';
 import Footer from '@/components/Footer';
+import { Londrina_Solid } from 'next/font/google';
+export const londrina = Londrina_Solid({
+  weight: ['100', '300', '400', '900'],
+  subsets: ['latin'],
+  variable: '--font-londrina-solid',
+});
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -13,7 +19,7 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const categoriesWithResources = await getCategoriesAndResources();
   return (
-    <html id="parent" lang="en">
+    <html id="parent" lang="en" className={`${londrina.variable}`}>
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Inter&display=optional"
