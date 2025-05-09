@@ -141,6 +141,41 @@ export default defineConfig({
           },
         ],
       },
+      {
+        name: "timeline",
+        label: "Timeline",
+        path: "content/timeline",
+        format: "mdx",
+        fields: [
+          {
+            type: "datetime",
+            name: "timestamp",
+            label: "Timestamp",
+            required: true,
+            ui: {
+              timeFormat: "HH:mm"
+            },
+          },
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "rich-text",
+            name: "content",
+            label: "Content",
+            isBody: true,
+            templates: allEmbedTemplates
+          }
+        ],
+        ui: {
+          // This is an DEMO router. You can remove this to fit your site
+          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
+        },
+      },
     ],
   },
 });
