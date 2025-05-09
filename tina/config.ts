@@ -1,4 +1,5 @@
-import { defineConfig, defineStaticConfig } from "tinacms";
+import { allEmbedTemplates } from "@/components/markdown-embeds";
+import { defineConfig } from "tinacms";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -127,17 +128,7 @@ export default defineConfig({
                 label: "Content",
                 isBody: true,
                 required: true,
-                templates: [
-                  {
-                    name: "Youtube",
-                    label: "Youtube",
-                    fields: [{
-                      name: "videoId",
-                      label: "Video ID (e.g. LNR1TIxNjvs)",
-                      type: "string"
-                    }]
-                  }
-                ]
+                templates: allEmbedTemplates
               },
               {
                 label: 'Category',

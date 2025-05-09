@@ -1,7 +1,6 @@
-import { ResourceArticle } from '@tina/types';
-import { TinaMarkdown, TinaMarkdownContent } from 'tinacms/dist/rich-text';
+import { TinaMarkdownWithEmbeds } from '@/components/markdown-embeds/tina-markdown-with-embeds';
 import client from '@tina/client';
-import React from 'react';
+import { ResourceArticle } from '@tina/types';
 import { find } from 'remeda';
 
 export async function generateStaticParams() {
@@ -15,21 +14,6 @@ export async function generateStaticParams() {
     slug: article.slug,
   }));
 }
-
-const components = {
-  Youtube: ({ videoId }: { videoId: string }) => {
-    return (
-      <iframe
-        className="w-full aspect-video"
-        src={`https://www.youtube-nocookie.com/embed/${videoId}`}
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-      ></iframe>
-    );
-  },
-};
 
 export const generateMetadata = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
@@ -57,7 +41,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   return (
     <div className="prose mx-auto mb-24 mt-16">
       <h1>{title}</h1>
-      <TinaMarkdown content={content} components={components} />
+      <TinaMarkdownWithEmbeds content={content} />
     </div>
   );
 }
