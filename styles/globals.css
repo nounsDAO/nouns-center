@@ -72,7 +72,7 @@ body {
 }
 
 h1 {
-  @apply text-5xl tracking-wide font-londrina;
+  @apply text-4xl sm:text-5xl tracking-wide font-londrina;
 }
 h2 {
   @apply text-3xl tracking-wide font-londrina;
