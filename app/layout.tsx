@@ -1,10 +1,10 @@
-import Navigation from '@/components/Navigation/Web';
-import '../styles/globals.css';
-import Head from 'next/head';
-import { Metadata } from 'next';
 import { getCategoriesAndResources } from '@/actions/getCategoriesAndResources';
 import Footer from '@/components/Footer';
+import Navigation from '@/components/Navigation/Web';
+import { Metadata } from 'next';
 import { Londrina_Solid } from 'next/font/google';
+import Head from 'next/head';
+import '../styles/globals.css';
 export const londrina = Londrina_Solid({
   weight: ['100', '300', '400', '900'],
   subsets: ['latin'],
@@ -26,7 +26,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           rel="stylesheet"
         />
       </Head>
-      <body className="bg-grey-lightest text-black">
+      <body className="bg-grey-lightest text-black overflow-x-clip">
         <Navigation categoriesWithResources={categoriesWithResources} />
 
         <div className=" flex flex-col flex-1 flex-between h-auto text-black m-auto">
